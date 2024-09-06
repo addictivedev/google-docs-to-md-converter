@@ -118,8 +118,7 @@ Completed
 
 **Image 1:**
 
-![preview image](./media/media/image4.png){width="12.5in"
-height="3.125in"}
+![preview image](./media/image1.png){width="12.5in" height="3.125in"}
 
 **Table 1:**
 
@@ -193,13 +192,12 @@ extension]{.underline}](https://workspace.google.com/u/1/marketplace/app/code_bl
 
 **Image 3:**
 
-![preview image](./media/media/image1.png){width="6.25in"
+![preview image](./media/image2.png){width="6.25in"
 height="4.166666666666667in"}
 
 ### Heading 3: Nested Heading
 
-![preview image](./media/media/image2.png){width="6.25in"
-height="9.375in"}
+![preview image](./media/image4.png){width="6.25in" height="9.375in"}
 
 \*\*Heading 4:\*\*Nested Heading
 
@@ -217,8 +215,7 @@ height="9.375in"}
 
 **Image 5:**
 
-![preview image](./media/media/image3.png){width="12.5in"
-height="3.125in"}
+![preview image](./media/image3.png){width="12.5in" height="3.125in"}
 
 ##### Heading 5: Nested Heading
 

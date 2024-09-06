@@ -75,7 +75,14 @@ def clean_base64_references(output_file):
 
     print("Base64 image definitions removed.")
 
-def main(docx_file, gdoc_file):
+def main():
+    if len(sys.argv) != 3:
+        print("Usage: gdoc2md <input_file.docx> <gdoc_export.md>")
+        sys.exit(1)
+
+    docx_file = sys.argv[1]
+    gdoc_file = sys.argv[2]
+
     # Output file for Pandoc Markdown
     pandoc_md_file = f"{docx_file.rsplit('.', 1)[0]}_pandoc.md"
     
@@ -97,11 +104,4 @@ def main(docx_file, gdoc_file):
     print(f"Conversion completed. Output saved to {output_file}")
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Usage: python script.py input_file.docx gdoc_export.md")
-        sys.exit(1)
-
-    docx_file = sys.argv[1]
-    gdoc_file = sys.argv[2]
-
-    main(docx_file, gdoc_file)
+    main()

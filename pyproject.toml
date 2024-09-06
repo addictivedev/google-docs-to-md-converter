@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "google_doc_to_markdown_code_blocks"
+name = "google-docs-to-md-converter"  # Change this to match your directory name
 version = "0.1.0"
 description = "A tool to fix the code blocks in a markdown document exported from Google Docs"
 authors = ["Nicola Brisotto <nicola@brisotto.me>"]
@@ -9,8 +9,11 @@ license = "Apache-2.0"  # Ensure this matches the LICENSE file
 python = "^3.8"  # Specify your Python version
 
 [tool.poetry.dev-dependencies]
-requests = "^2.25.1"  # Add requests as a development dependency
-pytest = "^6.2"  # Add pytest as a development dependency
+requests = "^2.25.1"
+pytest = "^6.2"
+
+[tool.poetry.scripts]
+gdoc2md = "google_docs_to_md_converter.docx2md:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

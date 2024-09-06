@@ -1,3 +1,15 @@
+# Install the tool with pipx
+
+```bash
+pipx install .
+```
+
+reopen a terminal and you can use the tool:
+
+```bash
+gdoc2md your_gdoc_file.docx your_gdoc_export.md
+```
+
 # Google Docs to Markdown Converter
 
 ## Context
@@ -72,13 +84,13 @@ Once you have exported both the `.docx` file and the Markdown file from Google D
 2. Run the script from the command line:
 
 ```bash
-python3 src/docx2md.py your_doc.docx your_exported_gdoc.md
+poetry run python3 google_docs_to_md_converter/docx2md.py tests/mocks/document.docx tests/mocks/document.md
 ```
 
 ### Example:
 
 ```bash
-python3 src/docx2md.py "My Document.docx" "My Document.md"
+poetry run python3 google_docs_to_md_converter/docx2md.py tests/mocks/document.docx tests/mocks/document.md
 ```
 
 The script will:
