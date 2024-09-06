@@ -7,7 +7,7 @@ def convert_docx_to_md(docx_file, pandoc_md_file):
     try:
         print(f"Converting {docx_file} to {pandoc_md_file} using pandoc...")
         subprocess.run(
-            ["pandoc", "--extract-media=./media", "-i", docx_file, "-o", pandoc_md_file],
+            ["pandoc", "--extract-media=.", "-i", docx_file, "-o", pandoc_md_file],
             check=True
         )
         print("Pandoc conversion successful.")

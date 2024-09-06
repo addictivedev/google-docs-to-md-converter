@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "google_doc_to_markdown_code_blocks"
+version = "0.1.0"
+description = "A tool to fix the code blocks in a markdown document exported from Google Docs"
+authors = ["Nicola Brisotto <nicola@brisotto.me>"]
+license = "Apache-2.0"  # Ensure this matches the LICENSE file
+
+[tool.poetry.dependencies]
+python = "^3.8"  # Specify your Python version
+
+[tool.poetry.dev-dependencies]
+requests = "^2.25.1"  # Add requests as a development dependency
+pytest = "^6.2"  # Add pytest as a development dependency
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

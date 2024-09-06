@@ -1,0 +1,9 @@
+#add a default gitignore file content for python projects
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pyx
+*.pxd
+*.pxi
+*.pxi_01

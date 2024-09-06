@@ -153,3 +153,32 @@ Please go through the entire markdown document, detect all the code blocks, clea
 # The exported markdown document
 <WHOLE_MARKDOWN_DOCUMENT_HERE>
 ```
+
+
+# Development
+
+## Mock Google Doc
+
+To run the tests, you need to have a Google Doc ID. You can use the following command to download the Google Doc and save it as a mock document. The expoet mock are expoported in tests/mocks/ but you can change the DOC_ID to download other documents or modify the document and download it again and commit the changes.
+
+```bash
+poetry run python3 tests/download_and_mock.py
+```
+
+## Run tests
+
+Run all tests:
+```bash
+PYTHONPATH=. poetry run pytest tests
+```
+
+Run a single test function in a file:
+```bash
+PYTHONPATH=. poetry run pytest tests/test_docx2md.py::TestDocxToMdConverter::test_convert_docx_to_md
+```
+
+Where:
+* `PYTHONPATH=.` is used to tell pytest to use the current directory as the Python path.
+* `poetry run` is used to tell pytest to use the Python interpreter managed by Poetry.
+* `TestDocxToMdConverter` is the test class.
+* `test_convert_docx_to_md` is the test function to run of the `TestDocxToMdConverter` class.
