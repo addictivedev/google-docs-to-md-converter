@@ -1,4 +1,4 @@
-# docx2md Conversion Script
+# Google Docs to Markdown Converter
 
 ## Context
 
@@ -109,3 +109,47 @@ This script allows you to get the best of both worlds when exporting Markdown fr
 
 ### Future Enhancements:
 As Google Docs now supports Markdown export natively (`File > Download > Markdown`), future versions of this tool may further optimize based on newer Google Docs export features, reducing the reliance on Pandoc for simpler documents. However, for now, this approach gives you the best results when combining formatting and image quality.
+
+
+# Problem with the Code Block Add-On
+
+## Introduction
+
+In the process of exporting code snippets from Google Docs to Markdown, users often encounter formatting issues. The Code Block Google Doc add-on, while useful, can produce exports that are not well-structured in Markdown. This can result in single-line outputs, strange characters, and code being placed within tables, making it difficult to read and use effectively. 
+
+## Solution for a single code block
+This can be easily fixed with the right prompt.
+
+
+```markdown
+# Context
+The code block that I will provide you:
+- was formatted with [Code Block Google doc add-on](https://workspace.google.com/u/1/marketplace/app/code\_blocks/100740430168):
+- than it has been exported from google doc to markdown
+- the resulting export is not well formatted in markdown: it is single line, it contains some strange chars, it is contained in table.
+
+# Objective
+I'll wiil paste below the exported markdown, please clean it up, detect the programming language and configure the markdown to use the right code highlight. Output only the code block in markdown, avoid explanations.
+
+# The exported markdown
+<MARKDOWN_CODE_BLOCK HERE>
+```
+
+
+## Solution For the whole document
+
+If your Google Doc contains multiple code blocks, and you want to fix them all, you can adapt the prompt to handle an entire document with several code blocks. The following prompt should be used to automatically identify and clean all code blocks in the document:
+
+```markdown
+# Context
+The markdown document that I will provide you:
+- was exported from Google Docs where code blocks were formatted using [Code Block Google Doc add-on](https://workspace.google.com/u/1/marketplace/app/code_blocks/100740430168):
+- then it was exported from Google Docs to Markdown.
+- the resulting export contains multiple code blocks that are not well formatted: they are in single lines, contain strange characters, and are enclosed within tables.
+
+# Objective
+Please go through the entire markdown document, detect all the code blocks, clean them up, detect the programming language for each code block, and configure the markdown to use the appropriate code highlighting. Output only the cleaned-up code blocks in markdown with the correct code highlighting.
+
+# The exported markdown document
+<WHOLE_MARKDOWN_DOCUMENT_HERE>
+```
