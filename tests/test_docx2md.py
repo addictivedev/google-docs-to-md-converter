@@ -19,6 +19,7 @@ class TestDocxToMdConverter(unittest.TestCase):
         convert_docx_to_md(self.docx_file, self.pandoc_md_file)
         image_references = extract_pandoc_image_references(self.pandoc_md_file)
         self.assertIsInstance(image_references, list)
+        self.assertTrue(len(image_references) > 0, "Expected at least one image reference, but found none.")
 
     def test_replace_gdoc_images(self):
         convert_docx_to_md(self.docx_file, self.pandoc_md_file)

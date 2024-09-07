@@ -19,7 +19,7 @@ def extract_pandoc_image_references(pandoc_md_file):
     """Extracts image references from the Pandoc-generated Markdown file."""
     image_references = []
     # Adjust regex to handle multi-line image references
-    image_pattern = re.compile(r'!\[\]\(./media/media/(image[0-9]+\.png)\)\{.*?\}', re.DOTALL)
+    image_pattern = re.compile(r'!\[.*?\]\(./media/(image[0-9]+\.png)\)\{.*?\}', re.DOTALL)
 
     print(f"Extracting image references from {pandoc_md_file}...")
     with open(pandoc_md_file, 'r') as pandoc_file:

@@ -8,12 +8,12 @@ license = "Apache-2.0"  # Ensure this matches the LICENSE file
 [tool.poetry.dependencies]
 python = "^3.8"  # Specify your Python version
 
-[tool.poetry.dev-dependencies]
-requests = "^2.25.1"
-pytest = "^6.2"
-
 [tool.poetry.scripts]
 gdoc2md = "google_docs_to_md_converter.docx2md:main"
+
+[tool.poetry.group.dev.dependencies]
+requests = "^2.25.1"
+pytest = "^8.3.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
