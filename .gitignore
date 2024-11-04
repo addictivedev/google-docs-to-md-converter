@@ -10,3 +10,4 @@ __pycache__
 tests/media/
 tests/mocks/document_imported.md
 dist/
+media

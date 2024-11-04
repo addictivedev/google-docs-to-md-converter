@@ -49,6 +49,12 @@ Steps:
 gdoc2md tests/mocks/document.docx tests/mocks/document.md
 ```
 
+There results will be saved in the current working directory:
+
+- `document_imported.md` the final markdown file with high-quality images.
+- `media/` all the images extracted.
+
+
 The script will:
 1. Convert the `.docx` file to Markdown using Pandoc.
 2. Extract the images from the Pandoc export.
@@ -60,7 +66,7 @@ The script will:
 
 Prerequisites: 
 
-- `pandco`
+- `pandoc`
 
 To Install Pandoc:
 
@@ -78,6 +84,13 @@ Install the tool locally:
 cd into this repo
 pipx install .
 ```
+
+To reinstall use ``--force`:
+
+```
+pipx install --force .
+```
+
 
 Reopen a terminal and the tool will be globally available as `gdoc2md`.
 
